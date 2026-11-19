@@ -1,7 +1,7 @@
 # Java Programming – Assignment 3 (CO3)
 
-**Student name:** [Enter your name]  
-**Register number:** [Enter your register number]  
+**Student name:** A Gayathri Shanmukhi
+**Register number:** 192324316L  
 **Java version:** Java 11 or later (Task 7 uses Files.readString)
 
 ## Folder structure
