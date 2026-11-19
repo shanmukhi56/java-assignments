@@ -2,9 +2,8 @@
 
 SIMATS Engineering | Programming in Java | CO4 | 50 marks
 
-**Name:** FILL IN YOUR NAME  
-**Register number:** FILL IN YOUR REGISTER NUMBER  
-**Repository:** FILL IN YOUR GITHUB LINK  
+**Name:** A Gayathri Shanmukhi 
+**Register number:** 192324315L
 **Verification environment:** OpenJDK 21.0.13. Sources use Java 8-compatible constructs, but only Java 21 compilation has been checked here.
 
 ## Start here (Windows)
