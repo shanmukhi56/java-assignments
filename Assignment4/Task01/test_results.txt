@@ -1,0 +1,2 @@
+DEMO receipt #1: 192424243 INR 1500.50
+PASS valid fee and six invalid amounts

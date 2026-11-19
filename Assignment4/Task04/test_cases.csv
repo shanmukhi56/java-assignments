@@ -1,0 +1,4 @@
+Test ID,Input / action,Expected result
+T4-01,Click three different blank drawing positions,Three dots; Clicks: 3
+T4-02,Minimize and restore after T4-01,Same three dots and count remain
+T4-03,Cover and uncover drawing window,Dots redrawn from stored points

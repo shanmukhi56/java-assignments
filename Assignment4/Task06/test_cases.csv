@@ -1,0 +1,10 @@
+Test ID,Input / action,Expected result
+T6-01,MySQL: S001;Student One;Music;Register,Successful registration
+T6-02,Repeat T6-01,Duplicate rejected
+T6-03,Empty ID;Student One;Music;Register,Invalid ID feedback
+T6-04,S001;Student One;Quiz;Register,Different event accepted
+T6-05,Committee;Music;Refresh,Only Music rows visible
+T6-06,Export filtered CSV;open output,All filtered rows; escaped headers/values
+T6-07,Close/reopen MySQL app;Refresh,Previously inserted rows persist
+T6-08,More than 50 rows;Next;Prev,At most 50 visible rows; correct boundaries
+T6-09,Stop DB then Refresh,Error shown; controls re-enabled; UI remains responsive

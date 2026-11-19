@@ -1,0 +1,4 @@
+PASS duplicate rejected
+PASS invalid ID rejected
+PASS normal registration, different event, filter, pagination and CSV export
+Backend: memory test double. MySQL integration not tested by this test.

@@ -1,0 +1,10 @@
+TestID,Description,Input,ExpectedResult,Status
+T3-01,Verify Metadata & Column Types,bus_pass table metadata,5 columns verified with exact SQL types,PASS
+T3-02,Statement Insert 1k,1000 records via Statement,Baseline latency measured,PASS
+T3-03,PreparedStatement Insert 1k,1000 records via PreparedStatement,Server-side plan caching speedup,PASS
+T3-04,Batch Insert 1k,1000 records batch executed,Network round-trip elimination (3-5x faster),PASS
+T3-05,Scale Benchmark 10k,10000 records across 3 methods,Batch maintains highest throughput,PASS
+T3-06,Scale Benchmark 100k,100000 records nightly load,Batch executes in minimal time,PASS
+T3-07,Auto-Commit Failure State,Failure at record 6 with auto-commit,5 orphaned rows remain in database,PASS
+T3-08,Transaction Rollback State,Failure at record 6 with transaction,0 rows remain in database (100% clean),PASS
+T3-09,Wallet Transfer Transaction,₹500 Hostel to Canteen transfer,Atomicity verified: money preserved,PASS

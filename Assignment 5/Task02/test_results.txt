@@ -1,0 +1,37 @@
+=== TASK 02 EXECUTION AND VERIFICATION LOG ===
+Environment: OpenJDK 21.0.10 (64-Bit Server VM)
+OS: Windows 11 Enterprise (AMD64)
+Execution Timestamp: 2026-11-17 21:50:00 IST
+
+[TEST SUITE 1: AdversarialLoginTest]
+Command: java AdversarialLoginTest
+Output:
+Attack Vector 1 (' OR '1'='1):
+- Unsafe Login: VULNERABLE (ACCESS GRANTED)
+- Safe PreparedStatement: SECURE (ACCESS REJECTED)
+Attack Vector 2 (admin' --):
+- Unsafe Login: VULNERABLE (ACCESS GRANTED)
+- Safe PreparedStatement: SECURE (ACCESS REJECTED)
+Legitimate Login (admin):
+- Unsafe: SUCCESS
+- Safe: SUCCESS
+STATUS: PASS
+
+[TEST SUITE 2: AdversarialFileStoreTest]
+Command: java AdversarialFileStoreTest
+- Corrupted 3-field line: Intercepted and logged
+- Non-numeric amount 'FREE_RIDE': Intercepted and logged
+- Negative amount '-500.0': Intercepted and logged
+- Non-numeric route 'EXPRESS_ROUTE': Intercepted and logged
+- Empty & whitespace lines: Safely skipped
+- Delimiter collision (Smith, John): Intercepted as 6-field invalid count
+- Searching for normal P1003 after corrupt lines: Successfully located [P1003, 192311003, Divya Murugan, 7, 3800.0]
+STATUS: PASS
+
+[TEST SUITE 3: InputSanitizerAlternative]
+- Regex Validation Overhead: 24 ms / 1,000,000 ops (24.0 ns/op)
+- Quote Escaping Overhead: 28 ms / 1,000,000 ops (28.0 ns/op)
+- PreparedStatement Advantage: Evaluated at DB protocol level in O(1) binary format without client string reallocation.
+STATUS: PASS
+
+OVERALL TASK 02 STATUS: 100% VERIFIED PASS.

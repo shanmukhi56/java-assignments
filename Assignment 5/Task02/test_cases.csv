@@ -1,0 +1,9 @@
+TestID,Description,Input,ExpectedResult,Status
+T2-01,Tautology SQL Injection,id=admin; pwd=' OR '1'='1,Unsafe=ACCESS GRANTED; Safe PreparedStatement=REJECTED,PASS
+T2-02,Comment Truncation SQL Injection,id=admin' --; pwd=arbitrary,Unsafe=ACCESS GRANTED; Safe PreparedStatement=REJECTED,PASS
+T2-03,Legitimate Valid Login,id=admin; pwd=AdminSecret@2026,Unsafe=SUCCESS; Safe=SUCCESS,PASS
+T2-04,Corrupted File Wrong Field Count,P9001;192311050;IncompleteLine,Safely skipped and logged in audit log,PASS
+T2-05,Corrupted File Non-Numeric Amount,P9002;192311051;Charlie Brown;12;FREE_RIDE,Safely skipped and logged in audit log,PASS
+T2-06,Corrupted File Non-Numeric Route,P9004;192311053;David Miller;EXPRESS;3500,Safely skipped and logged in audit log,PASS
+T2-07,Corrupted File Empty & Whitespace,Blank and whitespace lines,Safely skipped without error,PASS
+T2-08,Alternative Quote Escaping vs Prepared,Input sanitization comparison,O(m) heap copy vs O(1) binary protocol,PASS

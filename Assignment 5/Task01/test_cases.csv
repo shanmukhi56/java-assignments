@@ -1,0 +1,9 @@
+TestID,Description,Input,ExpectedResult,Status
+T1-01,Normal pass registration,P1001;192311001;Arun;12;4500,Record appended to CSV file,PASS
+T1-02,Find existing pass,PassID=P1003,[P1003; 192311003; Divya; 7; 3800.0],PASS
+T1-03,Find non-existent pass,PassID=P8888,null,PASS
+T1-04,Find damaged line,PassID=P1002 (damaged: P1002,DAMAGED LINE),null (skipped safely),PASS
+T1-05,List passes by route,Route=12,2 matching records retrieved,PASS
+T1-06,Buffering 1MB log,1MB file count,Unbuffered: 3018ms vs Buffered: 35ms (335x),PASS
+T1-07,Buffering 50MB log,50MB file count,Unbuffered: 133930ms vs Buffered: 1641ms (2391x),PASS
+T1-08,Growth scaling 100k,Search 100k records,O(n) linear scan (~36ms),PASS

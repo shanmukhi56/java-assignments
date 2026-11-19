@@ -1,0 +1,4 @@
+*.class
+lib/*.jar
+.env
+registrations.csv

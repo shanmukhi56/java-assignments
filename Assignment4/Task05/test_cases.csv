@@ -1,0 +1,6 @@
+Test ID,Input / action,Expected result
+T5-01,CompleteCode: 1000 INR to USD;Convert,12.00 USD
+T5-02,CompleteCode: abc;Enter,Invalid amount
+T5-03,Each Updated version: 1000 INR to EUR;Enter,Dialog shows 11.00 EUR
+T5-04,Each Baseline version: 1000 INR to USD;Convert,Label shows 12.00 USD
+T5-05,Each Updated version: NaN;Convert,Dialog shows Invalid amount

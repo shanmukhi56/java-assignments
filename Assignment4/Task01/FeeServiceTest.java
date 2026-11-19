@@ -1,0 +1,1 @@
+public class FeeServiceTest {public static void main(String[] args){FeeService s=new FeeService();System.out.println(s.pay("192424243","1500.50"));for(String a:new String[]{"","abc","-1","0","1.001","NaN"}){try{s.pay("192424243",a);throw new AssertionError(a);}catch(IllegalArgumentException expected){}}System.out.println("PASS valid fee and six invalid amounts");}}

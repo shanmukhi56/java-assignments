@@ -1,0 +1,5 @@
+Test ID,Input / action,Expected result
+T2-01,Select Cardiology then Orthopaedics,Doctor choices change to Kumar and Das
+T2-02,P001;Dr Kumar;09:00;Book,Booking confirmed
+T2-03,P002;same doctor and slot;Book,Slot rejected
+T2-04,Edit patient;close window;No then Yes,No keeps window open; Yes disposes

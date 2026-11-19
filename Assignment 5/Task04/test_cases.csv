@@ -1,0 +1,7 @@
+TestID,Description,Input,ExpectedResult,Status
+T4-01,CSV to DB Batch Migration,1000 valid CSV records,1000 rows migrated in 1 transaction,PASS
+T4-02,Migration Validation Audit,3 corrupted CSV records,Corrupt rows intercepted and logged,PASS
+T4-03,DatabaseMetaData Inspection,Metadata inspection query,Product, driver, and 4 tables reported,PASS
+T4-04,Generic DAO Implementation,StudentDao CRUD operations,Clean separation and type-safe retrieval,PASS
+T4-05,Hostel Graph Serialization,Hostel->Room->Resident serialization,Password & Connection transient (null),PASS
+T4-06,Multi-Campus Comparison,12 campuses scale analysis,RDBMS selected with concurrency justification,PASS

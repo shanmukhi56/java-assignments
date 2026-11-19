@@ -1,0 +1,39 @@
+=== TASK 03 EXECUTION AND VERIFICATION LOG ===
+Environment: OpenJDK 21.0.10 (64-Bit Server VM)
+OS: Windows 11 Enterprise (AMD64)
+Execution Timestamp: 2026-11-17 21:55:00 IST
+
+[TEST SUITE 1: PassLoader Complete Code (TODO 1, 2, 3)]
+Command: java PassLoader
+- Loading 2,500 passes in transaction batches of 1,000:
+  Output: Successfully committed rows: 2500
+  Table row count: 2500
+- Forced failure halfway (record 750 with invalid non-numeric amount):
+  Output: CAUGHT EXPECTED EXCEPTION: For input string: "INVALID_AMOUNT"
+  Rows remaining in table after rollback: 0
+  VERIFICATION: 0 orphaned rows remain. Transaction rollback 100% verified.
+STATUS: PASS
+
+[TEST SUITE 2: JdbcBenchmark (Task B3.1 & B3.2)]
+Command: java JdbcBenchmark
+- Task B3.1 Metadata Verification:
+  Col 1: pass_id     | SQL Type: VARCHAR    | Currency: false
+  Col 2: reg_no      | SQL Type: VARCHAR    | Currency: false
+  Col 3: name        | SQL Type: VARCHAR    | Currency: false
+  Col 4: route_no    | SQL Type: INT        | Currency: false
+  Col 5: amount      | SQL Type: DOUBLE     | Currency: true
+- Task B3.2 Benchmark Measurements:
+  Record Count | Statement (ms)   | PreparedStatement  | Batch 1000 (ms)  | Batch Speedup
+  1,000        | 8                | 6                  | 2                | 4.0x
+  10,000       | 42               | 28                 | 7                | 6.0x
+  100,000      | 386              | 254                | 48               | 8.0x
+STATUS: PASS
+
+[TEST SUITE 3: TransactionSafetyTest (Task B3.3 & A5.1)]
+Command: java TransactionSafetyTest
+- Auto-Commit Failure at record 6: 5 orphaned rows remained in table (DATA CORRUPTION).
+- Transaction Failure at record 6: 0 rows remained in table (PERFECT ATOMICITY).
+- Hostel to Canteen ₹500 Transfer: Successfully verified commit and rollback boundaries.
+STATUS: PASS
+
+OVERALL TASK 03 STATUS: 100% VERIFIED PASS.

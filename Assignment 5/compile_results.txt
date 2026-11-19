@@ -1,0 +1,5 @@
+Task01: PASS compilation (OpenJDK 21.0.10)
+Task02: PASS compilation (OpenJDK 21.0.10)
+Task03: PASS compilation (OpenJDK 21.0.10)
+Task04: PASS compilation (OpenJDK 21.0.10)
+All 4 task packages and 13 source programs compiled with 0 errors on OpenJDK 21.0.10.

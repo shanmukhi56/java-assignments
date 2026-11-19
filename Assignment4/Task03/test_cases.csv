@@ -1,0 +1,5 @@
+Test ID,Input / action,Expected result
+T3-01,Resize to 520x300 then 700x430 then 1000x650,Results area grows; top/bottom retain preferred height
+T3-02,Search Java;category Computing,One Java result
+T3-03,Clear query;All;Search;Next;Prev,Pages change; boundaries disabled
+T3-04,Select book;Reserve,Selected title appears in status

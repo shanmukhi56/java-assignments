@@ -1,0 +1,4 @@
+Test ID,Input / action,Expected result
+T1-01,192424243;1500.50;Pay,Demo receipt appears
+T1-02,192424243;abc;Pay,Validation message; no receipt
+T1-03,Clear then Receipt,Fields clear; last successful receipt remains available
