@@ -2,9 +2,9 @@
 
 SIMATS Engineering | Programming in Java (CSA09) | CO5 | 50 Marks
 
-**Student Name:** Anusha  
-**Register Number:** 192324316L 
-**Repository:** https://github.com/Anusha2321/CSA0906-Assignment---5.git  
+**Student Name:** A Gayathri Shanmkuhi
+**Register Number:** 192324315L 
+
 **Verification Environment:** OpenJDK 21.0.10 (64-Bit Server VM, Windows 11 Enterprise x64)
 
 ---
